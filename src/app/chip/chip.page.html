@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Chip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Chip</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Grupo 1: Ejemplos Básicos -->
+  <ion-item-divider>
+    <ion-label>Ejemplos Básicos</ion-label>
+  </ion-item-divider>
+  <ion-chip>Nuevo</ion-chip>
+  <ion-chip [disabled]="true">Deshabilitado</ion-chip>
+  <ion-chip [outline]="true">Contorno</ion-chip>
+
+  <!-- Grupo 2: Avatar e Iconos -->
+  <ion-item-divider>
+    <ion-label>Avatar e Iconos</ion-label>
+  </ion-item-divider>
+  <ion-chip>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Chip de Avatar</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-icon name="pin" color="primary"></ion-icon>
+    <ion-label>Chip con Icono</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+
+  <!-- Grupo 3: Colores -->
+  <ion-item-divider>
+    <ion-label>Chips por Colores</ion-label>
+  </ion-item-divider>
+  <ion-chip>Por Defecto</ion-chip>
+  <ion-chip color="primary">Primario</ion-chip>
+  <ion-chip color="secondary">Secundario</ion-chip>
+  <ion-chip color="tertiary">Terciario</ion-chip>
+  <ion-chip color="success">Éxito</ion-chip>
+  <ion-chip color="warning">Advertencia</ion-chip>
+  <ion-chip color="danger">Peligro</ion-chip>
+  <ion-chip color="light">Ligero</ion-chip>
+  <ion-chip color="medium">Medio</ion-chip>
+  <ion-chip color="dark">Oscuro</ion-chip>
+</ion-content>

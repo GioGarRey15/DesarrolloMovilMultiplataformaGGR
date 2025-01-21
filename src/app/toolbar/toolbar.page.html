@@ -1,0 +1,165 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ejemplo de Barra de Herramientas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Ejemplo 1: Encabezado Colapsable -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Ejemplo de Barra de Herramientas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Ejemplo 2: Barra de Herramientas en el Encabezado -->
+  <div class="section">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Barra de Herramientas en el Encabezado</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <!-- Ejemplo 3: Barra de Herramientas en el Pie -->
+  <div class="section">
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>Barra de Herramientas en el Pie</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+
+  <!-- Botones Inicio / Fin -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button>Inicio</ion-button>
+      </ion-buttons>
+      <ion-title>Botones Inicio / Fin</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>Fin</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botones Primarios / Secundarios -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button>Secundario</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button>Primario</ion-button>
+      </ion-buttons>
+      <ion-title>Botones Primarios / Secundarios</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botones con Iconos -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Botones con Iconos</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botones Sólidos -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button fill="solid">
+          <ion-icon slot="start" name="person-circle"></ion-icon>
+          Contacto
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button fill="solid">
+          Ayuda
+          <ion-icon slot="end" name="help-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Botones Sólidos</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botones de Contorno -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button fill="outline">
+          <ion-icon slot="start" name="star"></ion-icon>
+          Estrella
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button fill="outline">
+          Editar
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Botones de Contorno</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botón de Regreso -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Botón de Regreso</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Botón de Menú -->
+  <div class="section">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Botón de Menú</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <!-- Barra de Herramientas con Barra de Búsqueda -->
+  <div class="section">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Barra de Herramientas</ion-title>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <!-- Barra de Herramientas con Segmento -->
+  <div class="section">
+    <ion-header>
+      <ion-toolbar>
+        <ion-segment value="all">
+          <ion-segment-button value="all">
+            <ion-label>Todos</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="favorites">
+            <ion-label>Favoritos</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+</ion-content>

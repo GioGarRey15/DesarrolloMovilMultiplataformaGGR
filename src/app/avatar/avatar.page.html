@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Avatar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Avatar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Grupo 1: Avatar Simple -->
+  <ion-item-divider>
+    <ion-label>Avatar Simple</ion-label>
+  </ion-item-divider>
+  <ion-avatar>
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+
+  <!-- Grupo 2: Avatar en Chip -->
+  <ion-item-divider>
+    <ion-label>Avatar en un Chip</ion-label>
+  </ion-item-divider>
+  <ion-chip>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+  </ion-chip>
+
+  <!-- Grupo 3: Avatar en Item -->
+  <ion-item-divider>
+    <ion-label>Avatar en un Item</ion-label>
+  </ion-item-divider>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Item Avatar</ion-label>
+  </ion-item>
+</ion-content>

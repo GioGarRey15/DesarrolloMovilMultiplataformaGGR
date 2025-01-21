@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Checkbox</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Grupo 1: Checkbox Básico -->
+  <ion-item-divider>
+    <ion-label>Aceptación de Condiciones</ion-label>
+  </ion-item-divider>
+  <ion-checkbox>I accept the privacy policy and terms of service</ion-checkbox>
+
+  <!-- Grupo 2: Checkbox con Alineación -->
+  <ion-item-divider>
+    <ion-label>Opciones de Notificación</ion-label>
+  </ion-item-divider>
+  <ion-list>
+    <ion-item>
+      <ion-checkbox label-placement="stacked" alignment="start">Recibir notificaciones por email</ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox label-placement="stacked" alignment="center">Recibir notificaciones push</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Grupo 3: Checkbox Indeterminado -->
+  <ion-item-divider>
+    <ion-label>Preferencias de Usuario</ion-label>
+  </ion-item-divider>
+  <ion-checkbox [indeterminate]="true">Recibir actualizaciones de la aplicación</ion-checkbox>
+
+</ion-content>
