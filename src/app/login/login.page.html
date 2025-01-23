@@ -14,15 +14,15 @@
 
 
 <ion-item>
-  <ion-input label="correo electronico" labelplacementr="floating" placeholder="Ingrese su correo"></ion-input>
+  <ion-input [(ngModel)]="email" label="Correo electronico" labelplacementr="floating" placeholder="Ingrese su correo"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-input label="Contraseña" labelplacement="floating" placeholder ="Ingrese su contraseña"></ion-input>
+  <ion-input [(ngModel)]="password" label="Contraseña" labelplacement="floating" placeholder ="Ingrese su contraseña"></ion-input>
 </ion-item>
 
 
-    <ion-button expand="block" routerLink="/inicio">
+    <ion-button (click)="login()" expand="block">
       Ingresar
     </ion-button>
 </ion-list>
