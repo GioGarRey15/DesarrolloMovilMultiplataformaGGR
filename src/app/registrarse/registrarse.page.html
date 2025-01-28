@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Crear una Cuenta</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form #frmregister="ngForm" (ngSubmit)="register(frmregister)">
+          <ion-item>
+            <ion-label position="floating">Nombre de Usuario</ion-label>
+            <ion-input
+              name="username"
+              [(ngModel)]="username"
+              placeholder="Ingrese su nombre de usuario"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input
+              name="email"
+              [(ngModel)]="email"
+              type="email"
+              placeholder="Ingrese su correo"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input
+              name="password"
+              [(ngModel)]="password"
+              type="password"
+              placeholder="Ingrese su contraseña"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmar Contraseña</ion-label>
+            <ion-input
+              name="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              type="password"
+              placeholder="Confirme su contraseña"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-button expand="full" type="submit">Registrarse</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

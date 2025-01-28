@@ -1,54 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';  // Importa NgForm
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-  standalone: false
+  standalone:false
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  email: string = '';
+  password: string = '';
 
-  email: string = 'admin';
-  password: string = 'admin';
+  constructor(private router: Router) {}
 
-  constructor(
-    private navController: NavController  
-
-  ) {
-  }
-
-  ngOnInit() {
-  }
+  login(form: NgForm) {
+    console.log('Formulario:', form.value);  // Verifica si los datos del formulario están correctos
   
-  login(form : NgForm) {
-    // Si usuario=admijn y password=admin
-    //Entonces console.log('Login Correcto')
-    //Si no console.log('Login Incorrecto')
-    
-    
-    //Obtener los valores del formulario
-    console.log(form.value);
-
-    //Validar formulario
-    console.log('valid:', form.valid);
-
-    //Si form es inválido
-    //console.log ('Todos los campos son requeridos')
-    //return
-
-    if(form.invalid){
-    console.log ('Todos los campos son requeridos');
-    return;
+    if (!form.valid) {
+      alert('Por favor, complete todos los campos');
+      return;
     }
-    if(this.email === 'admin'
-    && this.password === 'admin'){
-    this.navController.navigateForward('/inicio');
-    }
-    else{
-      console.log('Login Incorrecto');
+  
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+  
+    if (this.email === storedEmail && this.password === storedPassword) {
+      console.log('Credenciales correctas');
+      alert('Inicio de sesión exitoso');
+      this.router.navigate(['/inicio']);
+    } else {
+      alert('Credenciales incorrectas');
     }
   }
-
-}
+}  
